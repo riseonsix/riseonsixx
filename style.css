@@ -5,18 +5,23 @@
 
 
 :root {
-   --black: #171c1b;
-   --dark: #111716;
+   --forest: #0c3b2e;
+   --sage: #6d9773;
+   --tan: #bb8a52;
+   --yellow: #ffba00;
+
+   --black: var(--forest);
+   --dark: var(--forest);
    --white: #ffffff;
    --off-white: #f7f4ee;
    --grey: #68716e;
-   --light-grey: #ddf4ee;
+   --light-grey: #e2ebe3;
 
 
    /* RiseOnSix accent */
-   --accent: #087f78;
-   --mint: #ddf4ee;
-   --gold: #b8924b;
+   --accent: var(--sage);
+   --mint: var(--sage);
+   --gold: var(--yellow);
 
 
    --heading: "Manrope", sans-serif;
@@ -114,7 +119,7 @@ h6 {
 
 
 .section-heading h2 span {
-   color: var(--accent);
+   color: var(--yellow);
 }
 
 
@@ -198,7 +203,7 @@ h6 {
 
 
 .nav-link:hover {
-   color: white !important;
+   color: #ffba00 !important;
 }
 
 
@@ -244,8 +249,8 @@ h6 {
 
 
 .btn-primary-custom:hover {
-   background: white;
-   color: black;
+   background: var(--yellow);
+   color: var(--forest);
    transform: translateY(-2px);
 }
 
@@ -279,8 +284,9 @@ h6 {
 
 
 .btn-outline-custom:hover {
-   background: white;
-   color: black;
+   background: var(--yellow);
+   color: var(--forest);
+   border-color: var(--yellow);
 }
 
 
@@ -363,13 +369,13 @@ h6 {
    height: 8px;
 
 
-   background: var(--accent);
+   background: var(--yellow);
 
 
    border-radius: 50%;
 
 
-   box-shadow: 0 0 15px var(--accent);
+   box-shadow: 0 0 15px var(--yellow);
 }
 
 
@@ -391,7 +397,7 @@ h6 {
 
 
 .hero-section h1 span {
-   color: var(--accent);
+   color: var(--yellow);
 }
 
 
@@ -463,7 +469,7 @@ h6 {
    display: block;
 
 
-   color: var(--accent);
+   color: var(--yellow);
 
 
    font-size: 9px;
@@ -507,73 +513,28 @@ h6 {
 }
 
 
-.chart-line {
+.chart-graph {
    position: absolute;
-
-
-   width: 88%;
-   height: 3px;
-
-
-   top: 50%;
-   left: 5%;
-
-
-   background: var(--accent);
-
-
-   border-radius: 10px;
-
-
-   transform: rotate(-12deg);
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   overflow: visible;
 }
 
 
-.chart-point {
-   position: absolute;
-
-
-   width: 10px;
-   height: 10px;
-
-
-   background: white;
-
-
-   border: 3px solid var(--accent);
-
-
-   border-radius: 50%;
+.chart-graph polyline {
+   fill: none;
+   stroke: var(--yellow);
+   stroke-width: 4;
+   stroke-linecap: round;
+   stroke-linejoin: round;
 }
 
 
-.point-1 {
-   left: 8%;
-   top: 62%;
-}
-
-
-.point-2 {
-   left: 28%;
-   top: 57%;
-}
-
-
-.point-3 {
-   left: 47%;
-   top: 45%;
-}
-
-
-.point-4 {
-   left: 68%;
-   top: 34%;
-}
-
-
-.point-5 {
-   right: 5%;
-   top: 20%;
+.chart-graph circle {
+   fill: white;
+   stroke: var(--yellow);
+   stroke-width: 4;
 }
 
 
@@ -617,7 +578,7 @@ h6 {
    margin-top: 4px;
 
 
-   color: var(--accent);
+   color: var(--yellow);
 }
 
 
@@ -853,7 +814,7 @@ h6 {
    right: 25px;
 
 
-   color: #aaa;
+   color: var(--tan);
 
 
    font-size: 11px;
@@ -1294,7 +1255,7 @@ h6 {
 
 
 .brands-heading h2 span {
-   color: var(--accent);
+   color: var(--yellow);
 
 
    font-style: italic;
@@ -1513,7 +1474,7 @@ h6 {
 
 
 .brand-logo:hover {
-   background: #202826;
+   background: var(--forest);
 
 
    border-color: rgba(255, 255, 255, 0.15);
@@ -2069,7 +2030,7 @@ footer a:not(.footer-logo) {
 
 
 footer a:hover {
-   color: white;
+   color: var(--yellow);
 }
 
 
@@ -3647,7 +3608,7 @@ footer a:hover {
 
 .founder-section {
    padding: 120px 0;
-   background: #f7f6f2;
+   background: var(--off-white);
    overflow: hidden;
 }
 
@@ -3669,7 +3630,7 @@ footer a:hover {
    position: absolute;
    width: 88%;
    height: 88%;
-   background: #111;
+   background: var(--dark);
    top: 25px;
    left: 25px;
    border-radius: 4px;
@@ -3699,7 +3660,7 @@ footer a:hover {
    right: -25px;
 
 
-   background: #fff;
+   background: var(--white);
    padding: 18px 24px;
 
 
@@ -3715,7 +3676,7 @@ footer a:hover {
    font-size: 10px;
    letter-spacing: 2px;
    font-weight: 700;
-   color: #777;
+   color: var(--grey);
 }
 
 
@@ -3743,7 +3704,7 @@ footer a:hover {
 
 .founder-section h2 span {
    display: block;
-   color: #777;
+   color: var(--grey);
 }
 
 
@@ -3761,7 +3722,7 @@ footer a:hover {
    font-size: 13px;
    text-transform: uppercase;
    letter-spacing: 1.5px;
-   color: #888;
+   color: var(--grey);
    margin-bottom: 28px;
 }
 
@@ -3809,8 +3770,8 @@ footer a:hover {
    padding: 14px 16px;
 
 
-   background: #fff;
-   border: 1px solid #e5e5e5;
+   background: var(--white);
+   border: 1px solid var(--light-grey);
 
 
    min-width: 170px;
@@ -3820,7 +3781,7 @@ footer a:hover {
 .founder-highlight strong {
    font-family: "Manrope", sans-serif;
    font-size: 13px;
-   color: #999;
+   color: var(--grey);
 }
 
 
@@ -3834,7 +3795,7 @@ footer a:hover {
 .founder-highlight span {
    display: block;
    font-size: 10px;
-   color: #888;
+   color: var(--grey);
    margin-top: 2px;
 }
 
@@ -3947,4 +3908,3 @@ footer a:hover {
 
 
 }
-
