@@ -51,6 +51,26 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    const founderSection = document.querySelector(".founder-section");
+
+    if (founderSection) {
+        founderSection.addEventListener("pointermove", function (event) {
+            if (event.pointerType === "touch") return;
+
+            const bounds = founderSection.getBoundingClientRect();
+            const x = ((event.clientX - bounds.left) / bounds.width) * 100;
+            const y = ((event.clientY - bounds.top) / bounds.height) * 100;
+
+            founderSection.style.setProperty("--cursor-x", x + "%");
+            founderSection.style.setProperty("--cursor-y", y + "%");
+            founderSection.classList.add("cursor-active");
+        });
+
+        founderSection.addEventListener("pointerleave", function () {
+            founderSection.classList.remove("cursor-active");
+        });
+    }
+
 
     /* =========================================================
        SIMPLE REVEAL ANIMATION

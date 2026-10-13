@@ -5,21 +5,21 @@
 
 
 :root {
-   --forest: #0c3b2e;
-   --sage: #6d9773;
-   --tan: #bb8a52;
-   --yellow: #ffba00;
+   --forest: #00363c;
+   --sage: #043e42;
+   --tan: #f5f0e9;
+   --yellow: #00d9d0;
 
-   --black: var(--forest);
-   --dark: var(--forest);
+   --black: #011b1f;
+   --dark: #011b1f;
    --white: #ffffff;
-   --off-white: #f7f4ee;
-   --grey: #68716e;
-   --light-grey: #e2ebe3;
+   --off-white: #f5f0e9;
+   --grey: #00363c;
+   --light-grey: rgba(4, 62, 66, 0.14);
 
 
    /* RiseOnSix accent */
-   --accent: var(--sage);
+   --accent: var(--yellow);
    --mint: var(--sage);
    --gold: var(--yellow);
 
@@ -160,7 +160,7 @@ h6 {
    position: fixed;
 
 
-   background: rgba(0, 0, 0, 0.94);
+   background: rgba(1, 27, 31, 0.94);
 
 
    backdrop-filter: blur(15px);
@@ -171,20 +171,17 @@ h6 {
 
 
 .navbar-brand {
-   color: white !important;
-
-
-   font-family: var(--heading);
-   font-size: 21px;
-   font-weight: 800;
-
-
-   letter-spacing: -1px;
+   display: inline-flex;
+   align-items: center;
 }
 
 
-.navbar-brand span {
-   color: var(--accent);
+.navbar-brand-logo {
+   display: block;
+   width: 128px;
+   height: auto;
+   max-height: 60px;
+   filter: brightness(0) invert(1);
 }
 
 
@@ -203,7 +200,7 @@ h6 {
 
 
 .nav-link:hover {
-   color: #ffba00 !important;
+   color: var(--yellow) !important;
 }
 
 
@@ -308,7 +305,10 @@ h6 {
    align-items: center;
 
 
-   background: var(--black);
+   background:
+       radial-gradient(ellipse at 78% 52%, rgba(0, 217, 208, 0.12), transparent 38%),
+       radial-gradient(ellipse at 0% 100%, rgba(4, 62, 66, 0.75), transparent 35%),
+       linear-gradient(115deg, var(--black) 0%, var(--forest) 58%, #002b30 100%);
 
 
    color: white;
@@ -327,10 +327,10 @@ h6 {
 
 
    background-image:
-       linear-gradient(rgba(255, 255, 255, 0.035) 1px,
+       linear-gradient(rgba(0, 217, 208, 0.035) 1px,
            transparent 1px),
        linear-gradient(90deg,
-           rgba(255, 255, 255, 0.035) 1px,
+           rgba(0, 217, 208, 0.035) 1px,
            transparent 1px);
 
 
@@ -1272,7 +1272,7 @@ h6 {
    margin: 18px auto 0;
 
 
-   color: var(--grey);
+   color: var(--off-white);
 
 
    font-size: 14px;
@@ -1349,7 +1349,7 @@ h6 {
 
    background: linear-gradient(90deg,
            var(--black) 0%,
-           rgba(0, 0, 0, 0) 100%);
+           rgba(1, 27, 31, 0) 100%);
 }
 
 
@@ -1359,7 +1359,7 @@ h6 {
 
    background: linear-gradient(270deg,
            var(--black) 0%,
-           rgba(0, 0, 0, 0) 100%);
+           rgba(1, 27, 31, 0) 100%);
 }
 
 
@@ -2209,8 +2209,9 @@ footer a:hover {
    }
 
 
-   .navbar-brand {
-       font-size: 18px;
+   .navbar-brand-logo {
+       width: 112px;
+       max-height: 52px;
    }
 
 
@@ -2743,7 +2744,7 @@ footer a:hover {
 
    /* SHADOW */
    box-shadow:
-       0 8px 25px rgba(0, 0, 0, 0.25),
+       0 8px 25px rgba(1, 27, 31, 0.25),
        0 0 0 0 rgba(37, 211, 102, 0.6);
 
 
@@ -2791,7 +2792,7 @@ footer a:hover {
 
 
    box-shadow:
-       0 12px 35px rgba(0, 0, 0, 0.3),
+       0 12px 35px rgba(1, 27, 31, 0.3),
        0 0 0 8px rgba(37, 211, 102, 0.15);
 
 
@@ -2813,7 +2814,7 @@ footer a:hover {
 
 
        box-shadow:
-           0 8px 25px rgba(0, 0, 0, 0.25),
+           0 8px 25px rgba(1, 27, 31, 0.25),
            0 0 0 0 rgba(37, 211, 102, 0.6);
 
 
@@ -2824,7 +2825,7 @@ footer a:hover {
 
 
        box-shadow:
-           0 8px 25px rgba(0, 0, 0, 0.25),
+           0 8px 25px rgba(1, 27, 31, 0.25),
            0 0 0 15px rgba(37, 211, 102, 0);
 
 
@@ -2835,7 +2836,7 @@ footer a:hover {
 
 
        box-shadow:
-           0 8px 25px rgba(0, 0, 0, 0.25),
+           0 8px 25px rgba(1, 27, 31, 0.25),
            0 0 0 0 rgba(37, 211, 102, 0);
 
 
@@ -2864,7 +2865,7 @@ footer a:hover {
        padding: 20px;
 
 
-       background: #000;
+       background: var(--dark);
 
 
        border-radius: 15px;
@@ -2993,10 +2994,9 @@ footer a:hover {
    }
 
 
-   .navbar-brand {
-
-
-       font-size: 18px;
+   .navbar-brand-logo {
+       width: 112px;
+       max-height: 52px;
    }
 
 
@@ -3607,89 +3607,45 @@ footer a:hover {
 
 
 .founder-section {
+   position: relative;
    padding: 120px 0;
-   background: var(--off-white);
+   background-color: var(--off-white);
+   background-image:
+       radial-gradient(ellipse at 12% 18%, rgba(0, 217, 208, 0.12), transparent 32%),
+       radial-gradient(ellipse at 88% 82%, rgba(4, 62, 66, 0.12), transparent 34%),
+       linear-gradient(rgba(4, 62, 66, 0.035) 1px, transparent 1px),
+       linear-gradient(90deg, rgba(4, 62, 66, 0.035) 1px, transparent 1px);
+   background-size: auto, auto, 72px 72px, 72px 72px;
    overflow: hidden;
 }
 
-
-
-
-/* Founder Image */
-
-
-.founder-image-wrapper {
-   position: relative;
-   width: 100%;
-   max-width: 460px;
-   margin: 0 auto;
-}
-
-
-.founder-image-bg {
+.founder-section::before {
+   content: "";
    position: absolute;
-   width: 88%;
-   height: 88%;
-   background: var(--dark);
-   top: 25px;
-   left: 25px;
-   border-radius: 4px;
+   inset: 0;
+   z-index: 0;
+   pointer-events: none;
+   opacity: 0;
+   background: radial-gradient(
+       280px circle at var(--cursor-x, 50%) var(--cursor-y, 50%),
+       rgba(0, 217, 208, 0.2),
+       transparent 75%
+   );
+   transition: opacity 250ms ease;
 }
 
-
-.founder-image {
-   position: relative;
-   display: block;
-   width: 100%;
-   height: 540px;
-   object-fit: cover;
-   border-radius: 4px;
-   z-index: 2;
+.founder-section.cursor-active::before {
+   opacity: 1;
 }
-
-
-
-
-/* Founder Badge */
-
-
-.founder-badge {
-   position: absolute;
-   z-index: 3;
-   bottom: 25px;
-   right: -25px;
-
-
-   background: var(--white);
-   padding: 18px 24px;
-
-
-   display: flex;
-   flex-direction: column;
-
-
-   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-}
-
-
-.founder-badge span {
-   font-size: 10px;
-   letter-spacing: 2px;
-   font-weight: 700;
-   color: var(--grey);
-}
-
-
-.founder-badge strong {
-   font-family: "Manrope", sans-serif;
-   font-size: 15px;
-   margin-top: 3px;
-}
-
-
 
 
 /* Founder Heading */
+
+.founder-content {
+   position: relative;
+   z-index: 1;
+   text-align: center;
+}
 
 
 .founder-section h2 {
@@ -3737,6 +3693,8 @@ footer a:hover {
    line-height: 1.6;
    font-weight: 500;
    max-width: 650px;
+   margin-left: auto;
+   margin-right: auto;
    margin-bottom: 18px;
 }
 
@@ -3744,6 +3702,8 @@ footer a:hover {
 .founder-section .body-text {
    max-width: 680px;
    line-height: 1.8;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 
@@ -3809,6 +3769,7 @@ footer a:hover {
    display: inline-flex;
    align-items: center;
    gap: 10px;
+   margin-top: 12px;
 }
 
 
@@ -3827,17 +3788,6 @@ footer a:hover {
    }
 
 
-   .founder-image-wrapper {
-       max-width: 420px;
-       margin-bottom: 30px;
-   }
-
-
-   .founder-image {
-       height: 480px;
-   }
-
-
    .founder-section h2 {
        font-size: 44px;
    }
@@ -3853,30 +3803,6 @@ footer a:hover {
 
    .founder-section {
        padding: 70px 0;
-   }
-
-
-   .founder-image-wrapper {
-       width: 90%;
-       margin: 0 auto 50px;
-   }
-
-
-   .founder-image {
-       height: 400px;
-   }
-
-
-   .founder-image-bg {
-       top: 15px;
-       left: 15px;
-   }
-
-
-   .founder-badge {
-       right: -10px;
-       bottom: -20px;
-       padding: 14px 18px;
    }
 
 
