@@ -71,40 +71,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-
-    /* =========================================================
-       SIMPLE REVEAL ANIMATION
-    ========================================================= */
-
-    const revealElements = document.querySelectorAll(
-        ".service-card, .about-card, .plan-card, " +
-        ".why-card, .result-card"
-    );
-
-    if (!("IntersectionObserver" in window)) {
-        revealElements.forEach(function (element) {
-            element.classList.add("show");
-        });
-
-        return;
-    }
-
-    const observer = new IntersectionObserver(
-        function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("show");
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        {
-            threshold: 0.1
-        }
-    );
-
-    revealElements.forEach(function (element) {
-        element.classList.add("reveal");
-        observer.observe(element);
-    });
 });

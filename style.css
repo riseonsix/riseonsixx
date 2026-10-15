@@ -47,7 +47,6 @@ html {
    scroll-behavior: smooth;
 }
 
-
 body {
    margin: 0;
    font-family: var(--body);
@@ -916,55 +915,6 @@ h6 {
 }
 
 
-.horizontal-service {
-   display: flex;
-
-
-   align-items: flex-start;
-
-
-   gap: 25px;
-}
-
-
-.horizontal-service .service-icon {
-   flex-shrink: 0;
-}
-
-
-.service-tags {
-   display: flex;
-
-
-   flex-wrap: wrap;
-
-
-   gap: 7px;
-
-
-   margin-top: 18px;
-}
-
-
-.service-tags span {
-   padding: 6px 10px;
-
-
-   border: 1px solid var(--light-grey);
-
-
-   border-radius: 50px;
-
-
-   color: var(--grey);
-
-
-   font-size: 10px;
-}
-
-
-
-
 /* =========================================================
   PROCESS
 ========================================================= */
@@ -1034,54 +984,6 @@ h6 {
    max-width: 620px;
    margin-right: auto;
    margin-left: auto;
-}
-
-
-.process-highlights {
-   display: grid;
-   grid-template-columns: repeat(3, minmax(0, 1fr));
-   gap: 10px;
-   margin-top: 28px;
-}
-
-
-.process-highlight {
-   display: flex;
-   align-items: center;
-   gap: 10px;
-   min-height: 88px;
-   padding: 12px 10px;
-   border: 1px solid rgba(0, 54, 60, 0.06);
-   border-radius: 12px;
-   background: rgba(0, 217, 208, 0.09);
-}
-
-
-.process-highlight > i {
-   flex: 0 0 auto;
-   color: var(--yellow);
-   font-size: 21px;
-}
-
-
-.process-highlight strong,
-.process-highlight span {
-   display: block;
-}
-
-
-.process-highlight strong {
-   color: var(--black);
-   font-size: 14px;
-   line-height: 1.25;
-}
-
-
-.process-highlight span {
-   margin-top: 3px;
-   color: var(--grey);
-   font-size: 10px;
-   line-height: 1.3;
 }
 
 
@@ -1261,11 +1163,6 @@ h6 {
        margin-bottom: 35px;
    }
 
-   .process-highlights {
-       max-width: 620px;
-       margin-right: auto;
-       margin-left: auto;
-   }
 }
 
 
@@ -1288,31 +1185,6 @@ h6 {
    .process-orbit-icon span {
        border-radius: 13px;
        font-size: 23px;
-   }
-
-   .process-highlights {
-       gap: 7px;
-   }
-
-   .process-highlight {
-       flex-direction: column;
-       align-items: flex-start;
-       justify-content: center;
-       gap: 5px;
-       min-height: 90px;
-       padding: 10px 8px;
-   }
-
-   .process-highlight > i {
-       font-size: 18px;
-   }
-
-   .process-highlight strong {
-       font-size: 12px;
-   }
-
-   .process-highlight span {
-       font-size: 9px;
    }
 
    .process-item {
@@ -1417,20 +1289,6 @@ h6 {
 
 
    letter-spacing: 1px;
-}
-
-
-.plan-label {
-   color: var(--accent);
-
-
-   font-size: 10px;
-
-
-   font-weight: 800;
-
-
-   letter-spacing: 2px;
 }
 
 
@@ -1561,7 +1419,6 @@ h6 {
    letter-spacing: 2.5px;
 }
 
-
 .brands-heading h2 {
    margin: 0;
 
@@ -1618,17 +1475,6 @@ h6 {
 /* =========================================================
   BRAND MARQUEE
 ========================================================= */
-
-
-.brands-logo-grid {
-   max-width: 1020px;
-   margin: 0 auto;
-   padding: 8px 24px;
-   display: grid;
-   grid-template-columns: repeat(6, 120px);
-   justify-content: center;
-   gap: 28px;
-}
 
 
 .brands-marquee {
@@ -1719,9 +1565,6 @@ h6 {
 
    will-change: transform;
 }
-
-
-
 
 /* Second row */
 
@@ -1933,59 +1776,6 @@ h6 {
 
 .brands-marquee:hover .brands-track {
    animation-play-state: paused;
-}
-
-
-
-
-/* =========================================================
-  BRANDS GRID - FALLBACK
-========================================================= */
-
-
-.brands-grid {
-   display: grid;
-
-
-   grid-template-columns: repeat(3, 1fr);
-
-
-   border-top: 1px solid rgba(255, 255, 255, 0.1);
-
-
-   border-left: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-
-.brand-box {
-   min-height: 140px;
-
-
-   display: flex;
-
-
-   align-items: center;
-   justify-content: center;
-
-
-   padding: 40px;
-
-
-   border-right: 1px solid rgba(255, 255, 255, 0.1);
-
-
-   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-
-.brand-box span {
-   color: white;
-
-
-   font-size: 18px;
-
-
-   font-weight: 800;
 }
 
 
@@ -2276,7 +2066,6 @@ h6 {
 
    overflow: hidden;
 }
-
 
 .cta-box h2 {
    position: relative;
@@ -2758,18 +2547,6 @@ footer a:hover {
    }
 
 
-   .horizontal-service {
-       display: block;
-   }
-
-
-   .horizontal-service .service-icon {
-       margin-bottom: 20px;
-   }
-
-
-
-
    /* Process */
 
 
@@ -3064,28 +2841,6 @@ footer a:hover {
    }
 
 
-}
-
-
-@media (max-width: 991px) {
-   .brands-logo-grid {
-       grid-template-columns: repeat(3, 120px);
-   }
-}
-
-
-@media (max-width: 575px) {
-   .brands-logo-grid {
-       grid-template-columns: repeat(2, 110px);
-       gap: 18px;
-   }
-
-
-   .brands-logo-grid .brand-logo {
-       width: 110px;
-       height: 110px;
-       flex-basis: 110px;
-   }
 }
 
 
@@ -3573,22 +3328,6 @@ footer a:hover {
 
        border-radius: 20px;
    }
-
-
-   .horizontal-service {
-
-
-       display: block;
-   }
-
-
-   .horizontal-service .service-icon {
-
-
-       margin-bottom: 20px;
-   }
-
-
 
 
    /* Process */
@@ -4105,55 +3844,7 @@ footer a:hover {
 
 
 
-/* Founder Highlights */
 
-
-.founder-highlights {
-   display: flex;
-   flex-wrap: wrap;
-   gap: 12px;
-   margin-top: 30px;
-   margin-bottom: 32px;
-}
-
-
-.founder-highlight {
-   display: flex;
-   align-items: center;
-   gap: 12px;
-
-
-   padding: 14px 16px;
-
-
-   background: var(--white);
-   border: 1px solid var(--light-grey);
-
-
-   min-width: 170px;
-}
-
-
-.founder-highlight strong {
-   font-family: "Manrope", sans-serif;
-   font-size: 13px;
-   color: var(--grey);
-}
-
-
-.founder-highlight h6 {
-   margin: 0;
-   font-size: 12px;
-   font-weight: 700;
-}
-
-
-.founder-highlight span {
-   display: block;
-   font-size: 10px;
-   color: var(--grey);
-   margin-top: 2px;
-}
 
 
 
@@ -4210,16 +3901,6 @@ footer a:hover {
 
    .founder-section .large-text {
        font-size: 17px;
-   }
-
-
-   .founder-highlights {
-       flex-direction: column;
-   }
-
-
-   .founder-highlight {
-       width: 100%;
    }
 
 
